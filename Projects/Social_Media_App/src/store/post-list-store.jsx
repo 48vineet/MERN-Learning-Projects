@@ -38,5 +38,9 @@ const PostListProvider = ({ children }) => {
 
     )
 }
+ 
+const DEFAULT_POST_LIST = [{
+
+}]
 
 export default PostListProvider;
