@@ -2,7 +2,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import CreatePost from "./components/CreatePost";
-import PostList from "./components/PostList";
+import PostList from './components/PostList'; // ✅ No curly braces
 import { useState } from "react";
 import PostListProvider from "./store/post-list-store";
 
