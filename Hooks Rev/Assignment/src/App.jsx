@@ -1,3 +1,4 @@
+// Hooks Rev/Assignment/src/App.jsx
 import Heading from "./components/Heading";
 import Input from "./components/Input";
 import Card from "./components/Card";
@@ -39,9 +40,9 @@ function App() {
   const [selectedState, setSelectedState] = useState("");
   const [weather, setWeather] = useState(null);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setSelectedState(inputValue);
+  // Modified handleSearch to accept the state name directly
+  const handleSearch = (stateName) => {
+    setSelectedState(stateName);
   };
 
   useEffect(() => {
@@ -57,7 +58,8 @@ function App() {
       <Input
         inputValue={inputValue}
         setInputValue={setInputValue}
-        handleSearch={handleSearch}
+        handleSearch={handleSearch} // Pass the modified handleSearch
+        selectedState={inputValue} // Pass inputValue as selectedState to Input component for validation
       />
       <Card weather={weather} />
     </div>
