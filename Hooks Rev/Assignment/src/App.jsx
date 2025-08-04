@@ -3,7 +3,7 @@ import Heading from "./components/Heading";
 import Input from "./components/Input";
 import Card from "./components/Card";
 import { useState, useEffect } from "react";
-
+ 
 function App() {
   const fakeWeatherData = [
     { state: "Andhra Pradesh", temperature: 34, condition: "Sunny", humidity: 58 },
