@@ -2,7 +2,7 @@ import RotatingText from "./RotatingText";
 const Heading = () => {
     return ( 
     <h1 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-gray-300 flex items-center gap-3 flex-wrap justify-center pt-6">
-    <span> Welcome To State Weather Info</span>
+    <span> Welcome To State Weather Info</span> 
     <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
       <RotatingText
         texts={['Rain', 'Foggy', 'Sunshine', 'Thunder', 'Cloudy' ]}
