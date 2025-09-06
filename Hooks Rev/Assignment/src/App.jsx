@@ -3,8 +3,12 @@ import Heading from "./components/Heading";
 import Input from "./components/Input";
 import Card from "./components/Card";
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 import FormTest from "./components/FormTest";
 
+=======
+ 
+>>>>>>> a07b0ee6c65ada0b3cc87ae070db436d726c8cca
 function App() {
   const fakeWeatherData = [
     {
