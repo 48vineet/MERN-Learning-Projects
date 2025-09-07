@@ -1,12 +1,16 @@
 import React from "react";
-import CatContext, { FactContext } from "./context/CatContext";
-import Index1 from "./components/Index1";
+import Context from "./Context/Context";
+import Expample1 from "./Context/Expample1";
+import Example2 from "./Context/Example2";
 
 const App = () => {
   return (
-    <CatContext>
-      <Index1 />
-    </CatContext>
+    <div>
+      <Context>
+        <Expample1 />
+        <Example2 />
+      </Context>
+    </div>
   );
 };
 
