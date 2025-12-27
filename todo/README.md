@@ -1,16 +1,118 @@
-# React + Vite
+# MERN Todo Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack todo application built with MongoDB, Express, React, and Node.js.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Add new todos
+- ✅ Mark todos as complete/incomplete
+- ✅ Delete todos
+- ✅ Beautiful UI with DaisyUI and Tailwind CSS
+- ✅ Real-time updates with MongoDB
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js (v14 or higher)
+- MongoDB Atlas account or local MongoDB installation
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 2. Install Backend Dependencies
+
+```bash
+cd backend
+npm install
+```
+
+## Running the Application
+
+### Start Backend Server
+
+```bash
+cd backend
+npm start
+```
+
+The backend server will run on `http://localhost:8080`
+
+### Start Frontend Development Server
+
+Open a new terminal and run:
+
+```bash
+npm run dev
+```
+
+The frontend will run on `http://localhost:5173`
+
+## Project Structure
+
+```
+todo/
+├── backend/
+│   ├── server.js           # Express server setup
+│   ├── controllers/        # Route controllers (business logic)
+│   │   └── todoController.js
+│   ├── routes/             # Express routers (routes wiring)
+│   │   └── todoRoutes.js
+│   ├── db/
+│   │   └── db.js          # MongoDB connection
+│   └── modals/
+│       └── Todo.js        # Todo mongoose model
+├── src/
+│   ├── App.jsx            # Main app component
+│   ├── components/
+│   │   ├── Form.jsx       # Todo form and list component
+│   │   └── Home.jsx       # Home header component
+│   └── main.jsx
+└── package.json
+```
+
+## API Endpoints
+
+- `GET /todos` - Get all todos
+- `POST /add` - Add a new todo
+- `PATCH /update/:id` - Toggle todo completion status
+- `DELETE /delete/:id` - Delete a todo
+
+## Technologies Used
+
+### Frontend
+
+- React
+- Axios
+- React Hook Form
+- Tailwind CSS
+- DaisyUI
+- Vite
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- CORS
+- Body-parser
+
+## Database Configuration
+
+The application uses MongoDB Atlas. Update the connection string in `backend/db/db.js` if needed:
+
+```javascript
+let url = "your-mongodb-connection-string";
+```
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+MIT
