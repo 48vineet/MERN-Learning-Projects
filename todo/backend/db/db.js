@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 import process from "process";
 
 async function connectDB() {
-  let url = "mongodb+srv://48vineet:Vineet%40123@airbnb.5tsow.mongodb.net/todo";
+  let url = process.env.MONGO_DB_URL;
+
   try {
     await mongoose.connect(url);
     console.log("Database Connected :", mongoose.connection.name);
